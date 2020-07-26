@@ -1,19 +1,11 @@
-// BOM - window
-// DOM - document
-
-// const title = document.querySelector('h1')
-
-// alert('Pause!!!')
-
-// title.textContent = 'Mudando!!'
-
 const root = document.querySelector('#root');
+const textTitle = 'Dificuldade'
 
-function newElement(tag, content) {
-    const title = `<${tag}>${content}</${tag}>`;
+// Tagged Template String
+const title = Title`
+    color: red;
+    font-size: 30px;
+    ${textTitle}
+`
 
-    root.insertAdjacentHTML('beforeend', title)
-}
-
-newElement('h4', 'Eita')
-newElement('h1', 'A, vá')
+root.insertAdjacentHTML('beforeend', title)
